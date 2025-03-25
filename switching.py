@@ -240,10 +240,10 @@ class SyncSystem:
                     return
 
                 # 处理删除操作（缺失文件）
-                for f in node.get('missing_files', []):
-                    target_file = self.config['gameFolderPath'] / current_path / f['name']
-                    report.write(f"[删除] {target_file.as_posix()}\n")
-                    total_ops += 1
+                # for f in node.get('missing_files', []):
+                #     target_file = self.config['gameFolderPath'] / current_path / f['name']
+                #     report.write(f"[删除] {target_file.as_posix()}\n")
+                #     total_ops += 1
                 
                 # 合并处理新增文件和修改文件
                 for f in node.get('new_files', []) + node.get('modified_files', []):
@@ -361,15 +361,15 @@ class SyncSystem:
                 ignore_list = self.config.get('ignore_list', [])
 
                 # 处理需要删除的文件
-                for f in node.get('missing_files', []):
-                    file_to_delete = current_dir / f['name']
-                    file_relative = (base_path / f['name']).as_posix()  # 新增相对路径
-                    if any(ignored in file_relative for ignored in ignore_list):
-                        continue  # 跳过被忽略的文件
+                # for f in node.get('missing_files', []):
+                #     file_to_delete = current_dir / f['name']
+                #     file_relative = (base_path / f['name']).as_posix()  # 新增相对路径
+                #     if any(ignored in file_relative for ignored in ignore_list):
+                #         continue  # 跳过被忽略的文件
 
-                    if file_to_delete.exists():
-                        file_to_delete.unlink()
-                        print(f"🗑️ 已删除多余文件: {file_to_delete}")
+                #     if file_to_delete.exists():
+                #         file_to_delete.unlink()
+                #         print(f"🗑️ 已删除多余文件: {file_to_delete}")
 
                 # 处理需要恢复的文件（包括新增和修改）
                 for f in node.get('new_files', []) + node.get('modified_files', []):
