@@ -3,10 +3,5 @@
     "client_launch_paths": {
         "Bilibili": "D:/Game/MingChao/Wuthering Waves/launcher.exe",
         "Official": "D:/Game/Wuthering Waves/launcher.exe"
-    },
-    "ignore_list": [
-        "Client/Saved"
-    ],
-    "backup_dir": "./",
-    "max_backups": 1
+    }
 }

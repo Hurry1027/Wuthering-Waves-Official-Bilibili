@@ -1,5 +1,5 @@
 @echo off
-title=鸣潮B服-官服转换工具
+title=鸣潮B服-官服转换工具2
 
 python --version >nul 2>&1
 if %errorlevel% equ 0 (
@@ -11,5 +11,5 @@ if %errorlevel% equ 0 (
     exit /b
 )
 
-python switching.py
+python switch.py
 pause
