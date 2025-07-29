@@ -28,6 +28,7 @@ Path('Bilibili').mkdir(parents=True, exist_ok=True)
 Path('Official').mkdir(parents=True, exist_ok=True)
 
 # 启动
+print(f'\n项目地址: https://github.com/Hurry1027/Wuthering-Waves-Official-Bilibili')
 print(f"\n当前版本: {current_ver} {KRSDKConfig['KR_GameVersion']}")
 print("请选择操作：")
 print(f"1. 启动 {current_ver} 客户端")
