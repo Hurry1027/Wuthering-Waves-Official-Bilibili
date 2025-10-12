@@ -12,4 +12,4 @@ if %errorlevel% equ 0 (
 )
 
 python switch.py
-pause
+timeout /t 3 >nul
